@@ -19,7 +19,7 @@ timeline
     targets: '.anim3',
     opacity: 1,
     //delay: 1000,
-    duration: 1000,
+    duration: 2000,
     easing: 'easeInExpo'
   })
 
