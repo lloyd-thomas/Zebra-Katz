@@ -1,0 +1,9 @@
+$fontpath: '/wp-content/themes/zebra/assets/fonts';
+
+@font-face {
+    font-family: 'ocrf-regular';
+    src: url('#{$fontpath}/ocrf-regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}

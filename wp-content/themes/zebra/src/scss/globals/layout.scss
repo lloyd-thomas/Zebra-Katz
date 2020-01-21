@@ -1,0 +1,22 @@
+/*================ General layout styles ================*/
+body,
+html {
+
+
+  line-height: $global-lineheight;
+  @include media-query($medium-up) {
+      font-size: $global-font-size;
+  }
+}
+
+body{
+  background-color: $color-body;
+  color: $color-body-text;
+}
+
+.page-width {
+  @include clearfix();
+  max-width: $width-site;
+  padding: 0 $gutter;
+  margin: 0 auto;
+}

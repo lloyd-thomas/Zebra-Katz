@@ -1,0 +1,41 @@
+.home{
+    background-color: black;
+  #header-search{
+    //display: none;
+    input{
+      @include media-query($medium-up) {
+        visibility: hidden;
+      }
+    }
+  }
+  ul.menu {
+  	font-weight: 600;
+  }
+
+	color: #fff !important;
+	padding: 0;
+
+  #floatingHeader li a:link,
+  #floatingHeader li a:visited {
+  	text-decoration: none;
+  	color: #fff !important;
+  }
+
+  .video-pos{
+    .columns{
+      display: flex;
+    }
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index: -1;
+    .video-wrapper{
+      height:auto;
+      padding-bottom:0;
+      position:static;
+    }
+  }
+
+}

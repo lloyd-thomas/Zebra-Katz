@@ -1,0 +1,66 @@
+body,
+html {
+  font-family: $base-font-family;
+  font-size: 13px;
+  line-height: 1.33em;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+section{
+/*  height:100px;
+  background-color: red;
+  overflow: hidden;
+  border-radius: 500px;*/
+}
+
+#wave {
+  position: relative;
+  height: 100px;
+  width: 100vw;
+  background: red;
+}
+
+
+#main {}
+
+.page-width {
+  max-width: $width-site;
+  margin: auto;
+  position: relative;
+}
+
+.tabStyle {
+  font-size: 11px;
+  padding: 0 6px;
+  background: $color-secondary;
+  font-weight: bold;
+  margin: 4px 4px 0 0;
+  color: white;
+  border-radius: 22px;
+}
+
+ul.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  li {
+    @extend .tabStyle;
+
+    &:before {
+      //  position: absolute;
+      font-family: "Lucida Console";
+      font-size: 13px;
+      content: '# ';
+    }
+
+    &:hover {
+      background: $color-active;
+    }
+    //  @extend .icon-hash;
+  }
+}

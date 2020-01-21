@@ -1,0 +1,28 @@
+.link-template-default.thumbnail .wpdm-download-link.btn{
+  font-size: 1rem;
+}
+
+
+.w3eden{
+  .btn-primary{
+    background-color: $color-accent;
+    &:hover{
+      background-color: shade($color-accent,50%);
+    }
+  }
+ .pull-left{
+   display: none;
+  }
+  .btn{
+    border-radius: 0 !important;
+  }
+  .link-template-default{
+    border-radius: 0;
+  }
+  .media-body{
+    width:100%;
+    i{
+      display: none;
+    }
+  }
+}

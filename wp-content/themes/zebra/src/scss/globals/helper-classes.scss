@@ -1,0 +1,154 @@
+/*================ Helper Classes ================*/
+.clearfix {
+  @include clearfix();
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}
+
+.js-focus-hidden:focus {
+  outline: none;
+}
+
+.label-hidden {
+  @include visually-hidden();
+
+  // No placeholders, so force show labels
+  .no-placeholder & {
+    @include visually-shown();
+  }
+}
+
+.visually-shown {
+  @include visually-shown();
+}
+
+// Only show when JS is not supported
+.no-js:not(html) {
+  display: none;
+
+  .no-js & {
+    display: block;
+  }
+}
+
+// Only show when JS is supported
+.js {
+  .no-js & {
+    display: none;
+  }
+}
+
+// Only show when browser cookies are not supported
+.supports-no-cookies:not(html) {
+  display: none;
+
+  html.supports-no-cookies & {
+    display: block;
+  }
+}
+
+// Only show when browser cookies are supported
+.supports-cookies {
+  html.supports-no-cookies & {
+    display: none;
+  }
+}
+
+//
+
+.text-center{
+  text-align: center;
+}
+
+.text-upper{
+  text-transform: uppercase;
+}
+
+//
+
+.m-t{
+  margin-top:1.5rem;
+}
+
+.m-b-none{
+  margin-bottom:0;
+}
+
+.m-b{
+  margin-bottom:1.5rem;
+}
+
+.m-t-large{
+  margin-top:3rem;
+}
+
+.m-b-large{
+  margin-bottom:3rem;
+}
+
+.p-t{
+  padding-top:1.5rem;
+}
+
+.p-b{
+  padding-bottom:1.5rem;
+}
+
+.border-top{
+    border-top: 1px solid rgba($color-primary, .5);
+    padding: 1rem 0;
+}
+
+.border-bottom{
+    border-bottom: 1px solid rgba($color-primary, .5);
+    padding: 1rem 0;
+}
+
+/*============================================================================
+  Skip to content button
+    - Overrides .visually-hidden when focused
+==============================================================================*/
+.skip-link:focus {
+  @include visually-shown(absolute);
+
+  color: $color-body-text;
+  background-color: $color-body;
+  padding: $gutter / 2;
+  z-index: $z-index-skip-to-content;
+  transition: none;
+}
+
+.fixed    { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.static   { position: static; }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+  position: relative;
+
+  embed,
+  object,
+  video,
+  iframe {
+    position: absolute;
+    width:100%;
+    height:100%;
+  }
+}
+
+
+.flex-vertical-align-center{
+  display: flex;
+  align-items: center;
+}

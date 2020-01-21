@@ -1,0 +1,33 @@
+// Foundation - pre settings
+//@import "../node_modules/foundation-sites/scss/foundation";
+
+// Vendor
+//$fa-font-path: "./vendor/font-awesome/fonts";
+//@import "vendor/font-awesome/scss/font-awesome";
+/*================ UTILS ================*/
+@import 'tools/mixins';
+@import 'tools/functions';
+
+// Override and add to settings
+@import "globals/colors";
+@import "globals/fonts";
+@import "globals/type";
+@import "settings/variables";
+
+/*================ COMMON ================*/
+@import 'globals/normalize';
+@import 'globals/helper-classes';
+@import 'globals/grid';
+@import 'globals/layout';
+@import 'globals/global';
+
+@import "icons/style";
+
+
+@import "modules/base";
+@import "modules/header";
+
+@import "globals/buttons";
+
+// Our templates
+@import "templates/home";

@@ -1,0 +1,167 @@
+
+.biog-copy{
+  grid-column: biog;
+  p{
+    font-size:1rem;
+    line-height: 1.33rem;
+    letter-spacing: -0.04em;
+  }
+}
+
+.feartured-image{
+  grid-column: feature;
+  img{
+    width:100%;
+    height:auto;
+  }
+}
+
+
+.col_2_wrapper{
+  @include media-query($medium-up) {
+
+    display: grid;
+    grid-template-columns: [biog] 1fr [feature] 1fr;
+    grid-gap: 4rem;
+  }
+}
+
+
+
+.slick-slide{
+    width:100vw;
+    max-width: $width-site;
+    height:auto;
+    position: relative;
+    .slide{
+      position: relative;
+    	padding-bottom: 33%; /* 16:9 */
+    	padding-top: 25px;
+    	height: 0;
+      iframe {
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	width: 100%;
+      	height: 100%;
+      }
+    }
+}
+.press-articles-wrapper,.press-portraits-wrapper{
+  ul{
+    padding:0;
+    list-style-type:none;
+    display: grid;
+    }
+}
+
+.press-portraits-wrapper{
+  ul{
+    display:grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    @include media-query($medium-up) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1rem;
+    }
+  }
+}
+
+.press-articles-wrapper{
+  ul{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    li{
+      img{
+        height: auto;
+      }
+    }
+  }
+}
+
+
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
+/////////////////////////////////////////
+
+.people-list,.studio-contacts{
+  ul{
+    padding:0;
+    list-style-type:none;
+  }
+}
+
+.studio-contacts{
+  margin-bottom: 3rem;
+  ul{
+    @include media-query($medium-up) {
+    //  display: grid;
+    //  grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  address{
+    font-style: normal;
+  }
+}
+
+.contact-info{
+  border-bottom: 1px dashed;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  .contact_name{
+    margin-bottom:1rem;
+    &:last-child{
+        margin-bottom:0;
+    }
+  }
+}
+
+
+///////////////////////////////////////////
+
+.random-grid{
+  border-top:1px dashed;
+  padding-top:3rem;
+  .project-title{
+    position: absolute;
+    bottom:0;
+    padding: 4px 8px 4px 0;
+    background: white;
+  }
+  ul{
+    padding:0;
+    list-style-type:none;
+    li{
+      margin-bottom: 1rem;
+
+    }
+    @include media-query($medium-up) {
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1rem;
+      li{
+        position: relative;
+        background: $color-secondary;
+        padding:0;
+        overflow: hidden;
+        max-height:400px;
+        margin-bottom: 0;
+        img{
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.span2{
+          grid-column: span 2;
+        }
+        &.span3{
+          grid-column: span 3;
+        }
+      }
+    }
+  }
+}
