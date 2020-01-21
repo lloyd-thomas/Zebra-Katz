@@ -1350,12 +1350,21 @@ img {
 
 section {
   position: relative;
-  height: 640px;
-  width: 100vw;
-  border: 1px solid red; }
+  width: 100vw; }
   section img {
-    height: 100vh;
+    width: 50%;
     max-width: none; }
+
+section.tour {
+  height: 80vh; }
+
+section.final-image {
+  height: auto;
+  background: #f7f9f6; }
+  section.final-image img {
+    height: auto;
+    display: block;
+    margin: auto; }
 
 h1 {
   font-size: 3em;
@@ -1437,35 +1446,6 @@ header {
     font-size: 7px; }
   .circle-btn:hover {
     background: white; }
-
-.home {
-  background-color: black;
-  color: #fff !important;
-  padding: 0; }
-  @media only screen and (min-width: 750px) {
-    .home #header-search input {
-      visibility: hidden; } }
-  .home ul.menu {
-    font-weight: 600; }
-  .home #floatingHeader li a:link,
-  .home #floatingHeader li a:visited {
-    text-decoration: none;
-    color: #fff !important; }
-  .home .video-pos {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; }
-    .home .video-pos .columns {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-    .home .video-pos .video-wrapper {
-      height: auto;
-      padding-bottom: 0;
-      position: static; }
 
 /*================ VENDOR ================*/
 #mc_embed_signup {

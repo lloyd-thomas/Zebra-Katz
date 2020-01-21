@@ -5,17 +5,17 @@
 <?php get_header(); ?>
 
 
+<main>
+<section class="wrapper">
 
-<section class="wrapper" style="clip-path: url(#mask2);">
-
-  <div class="rellax" data-rellax-speed="-3" data-rellax-percentage="0.5" >
+  <div class="rellax" data-rellax-speed="-0.5" data-rellax-percentage="0.5" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:black;transform:translateY(-5%);">
         <div class="page-width text-center">
 <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
 </div>
 </div>
 </section>
 
-<section class="wrapper" id="wave" style="clip-path: url(#mask2);background:black;transform:translateY(-10%);">
+<section class="wrapper tour" id="wave" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:black;transform:translateY(-10%);">
       <div class="page-width text-center">
   <div style="color:white;padding-top:10%; font-size:16px">
     <?php include get_template_directory() . '/parts/snippets/somgkick.php'; ?>
@@ -23,10 +23,10 @@
 </div>
 </section>
 
-<section class="wrapper" id="wave" style="clip-path: url(#mask);background:white;transform:translateY(-10%);">
-      <div class="page-width text-center">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer.jpg">
-      <div>
+<section class="wrapper final-image" id="wave" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:white;">
+
+        <img class="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer.jpg">
+
       </section>
 <svg width="0" height="0">
   <defs>
@@ -43,9 +43,5 @@
     </clipPath>
   </defs>
 </svg>
-
-
-
-
-
+</main>
 <?php get_footer(); ?>
