@@ -18,6 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="cleartype" content="on">
 <?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
 <?php
 	// Connect to the Browsersync server
@@ -33,12 +34,14 @@
 <body <?php body_class($my_class); ?>>
   <header>
     <div class="page-width">
+      <div class="header-strip-wrapper">
       <?php include get_template_directory() . '/parts/snippets/social-icons.php'; ?>
+      <?php include get_template_directory() . '/parts/snippets/mailchimp.php'; ?>
+    </div>
     </div>
   </header>
-<div class="page-width">
-
-	<div id="logo" class="rellax">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-zebrakatz.svg">
+  <div class="page-width" style="margin:6rem auto">
+  	<div id="logo" class="logo-wrapper">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-zebrakatz.svg">
+    </div>
   </div>
-</div>

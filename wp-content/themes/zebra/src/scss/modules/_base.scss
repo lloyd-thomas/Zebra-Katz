@@ -9,21 +9,24 @@ html {
 img {
   max-width: 100%;
 }
-section{
-/*  height:100px;
-  background-color: red;
-  overflow: hidden;
-  border-radius: 500px;*/
-}
 
-#wave {
+section {
   position: relative;
-  height: 100px;
+  height: 640px;
   width: 100vw;
-  background: red;
+  border:1px solid red;
+  img{
+    height:100vh;
+    max-width:none;
+  }
 }
 
-
+h1{
+  font-size: 3em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: $font-stack-header;
+}
 #main {}
 
 .page-width {
@@ -41,6 +44,7 @@ section{
   color: white;
   border-radius: 22px;
 }
+
 
 ul.tabs {
   display: flex;

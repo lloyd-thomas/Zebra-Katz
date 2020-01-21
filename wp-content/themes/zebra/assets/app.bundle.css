@@ -28,6 +28,13 @@
   font-weight: normal;
   text-rendering: optimizeLegibility; }
 
+@font-face {
+  font-family: 'poplarStd';
+  src: url("/wp-content/themes/zebra/assets/fonts/poplarStd.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+
 /*================ Color Variables ================*/
 /*================ Typography Variables ================*/
 /*============================================================================
@@ -531,11 +538,11 @@ html.supports-no-cookies .supports-cookies {
   padding-bottom: 1.5rem; }
 
 .border-top {
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   padding: 1rem 0; }
 
 .border-bottom {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding: 1rem 0; }
 
 /*============================================================================
@@ -549,8 +556,8 @@ html.supports-no-cookies .supports-cookies {
   width: auto;
   height: auto;
   margin: 0;
-  color: #1a1a1a;
-  background-color: white;
+  color: white;
+  background-color: black;
   padding: 16px;
   z-index: 10000;
   -webkit-transition: none;
@@ -1266,8 +1273,8 @@ html {
       font-size: 16px; } }
 
 body {
-  background-color: white;
-  color: #1a1a1a; }
+  background-color: black;
+  color: white; }
 
 .page-width {
   *zoom: 1;
@@ -1332,7 +1339,7 @@ body {
 
 body,
 html {
-  font-family: "ocrf-regular", monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 13px;
   line-height: 1.33em;
   -webkit-box-sizing: border-box;
@@ -1342,16 +1349,19 @@ img {
   max-width: 100%; }
 
 section {
-  /*  height:100px;
-  background-color: red;
-  overflow: hidden;
-  border-radius: 500px;*/ }
-
-#wave {
   position: relative;
-  height: 100px;
+  height: 640px;
   width: 100vw;
-  background: red; }
+  border: 1px solid red; }
+  section img {
+    height: 100vh;
+    max-width: none; }
+
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: "poplarStd", monospace; }
 
 .page-width {
   max-width: 984px;
@@ -1380,10 +1390,24 @@ ul.tabs {
     font-size: 13px;
     content: '# '; }
   ul.tabs li:hover {
-    background: #000000; }
+    background: white; }
 
 header {
   margin: 1.5rem 0; }
+  header .header-strip-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.logo-wrapper {
+  width: 360px;
+  margin: auto; }
 
 .social-wrapper ul {
   margin: 0;
@@ -1392,7 +1416,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
   .social-wrapper ul li {
     padding-right: 1em; }
 
@@ -1403,7 +1427,7 @@ header {
   margin: 0 2px;
   padding: 0;
   position: relative;
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(255, 255, 255, 0.1); }
   .circle-btn i {
     position: absolute;
     left: 50%;
@@ -1412,7 +1436,7 @@ header {
             transform: translate(-50%, -50%);
     font-size: 7px; }
   .circle-btn:hover {
-    background: #000000; }
+    background: white; }
 
 .home {
   background-color: black;
@@ -1442,3 +1466,32 @@ header {
       height: auto;
       padding-bottom: 0;
       position: static; }
+
+/*================ VENDOR ================*/
+#mc_embed_signup {
+  clear: left; }
+  #mc_embed_signup form {
+    padding: 0 !important; }
+  #mc_embed_signup input.email {
+    font-family: "Roboto Mono", monospace !important;
+    border-radius: 0 !important;
+    background: black;
+    border-style: dashed;
+    color: white;
+    margin-bottom: 0 !important; }
+  #mc_embed_signup .button {
+    background-color: transparent !important;
+    font-family: "Roboto Mono", monospace;
+    border-bottom: 2px solid #FD6186 !important;
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    padding: 0 !important;
+    margin: 0 !important; }
+
+#mc_embed_signup_scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }

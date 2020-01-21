@@ -7,3 +7,11 @@ $fontpath: '/wp-content/themes/zebra/assets/fonts';
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
+
+@font-face {
+    font-family: 'poplarStd';
+    src: url('#{$fontpath}/poplarStd.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}

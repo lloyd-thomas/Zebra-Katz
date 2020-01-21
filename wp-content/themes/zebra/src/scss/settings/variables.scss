@@ -1,11 +1,11 @@
 /*================ Color Variables ================*/
 
 $site-colors: (
-  'primary': #000000,
-  'accent': #32cf87,
+  'primary': white,
+  'accent': #FD6186,
   'secondary': #9B9B9B,
   'foreground': black,
-  'background': white,
+  'background': black,
   'background-secondary': #9C9B9B
 );
 
@@ -47,10 +47,12 @@ $color-success-bg: #000;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-$font-stack-header: 'ocrf-regular',monospace;
+
+
+$font-stack-header: 'poplarStd', monospace;
 $font-weight-header: $font-weight-bold;
 
-$font-stack-body: 'ocrf-regular',monospace;
+$font-stack-body: 'Roboto Mono', monospace;
 $font-size-base: 15px;
 $font-small: 13px;
 
@@ -115,7 +117,7 @@ $z-index-skip-to-content: 10000; // really high to be safe of app markup
 $svg-select-icon: #{'{{ "ico-select.svg" | asset_url }}'};*/
 
 /*================ Font variables =========*/
-$base-font-family: 'ocrf-regular',monospace;
+$base-font-family: 'Roboto Mono', monospace;
 
 // Animations
 $base-duration: 150ms;
