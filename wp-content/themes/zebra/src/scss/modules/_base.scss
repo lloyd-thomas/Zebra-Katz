@@ -20,7 +20,7 @@ section {
 }
 
 section.tour{
-  height:80vh;  
+  height:80vh;
 }
 section.final-image{
     height: auto;
@@ -78,4 +78,8 @@ ul.tabs {
     }
     //  @extend .icon-hash;
   }
+}
+
+.anim1,.anim2,.anim3{
+  opacity: 0;
 }

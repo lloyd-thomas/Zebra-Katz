@@ -9,13 +9,13 @@
 <section class="wrapper">
 
   <div class="rellax" data-rellax-speed="-0.5" data-rellax-percentage="0.5" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:black;transform:translateY(-5%);">
-        <div class="page-width text-center">
-<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
-</div>
+        <div class="page-width text-center" >
+          <img class="anim3" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
+        </div>
 </div>
 </section>
 
-<section class="wrapper tour" id="wave" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:black;transform:translateY(-10%);">
+<section class="wrapper tour" data-aos="fade-up" data-aos-duration="3000" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:black;">
       <div class="page-width text-center">
   <div style="color:white;padding-top:10%; font-size:16px">
     <?php include get_template_directory() . '/parts/snippets/somgkick.php'; ?>
@@ -23,7 +23,7 @@
 </div>
 </section>
 
-<section class="wrapper final-image" id="wave" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:white;">
+<section class="wrapper final-image" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:white;">
 
         <img class="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer.jpg">
 
