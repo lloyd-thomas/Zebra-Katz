@@ -1,5 +1,7 @@
 header {
+  @include media-query($medium-up) {
   margin: 1.5rem 0;
+}
 
   .header-strip-wrapper {
     @include media-query($medium-up) {
