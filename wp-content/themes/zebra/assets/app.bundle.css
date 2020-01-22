@@ -1296,6 +1296,24 @@ body {
     display: table;
     clear: both; }
 
+/*================ Links & Buttons ================*/
+.btn {
+  -moz-user-select: "none";
+  -ms-user-select: "none";
+  -webkit-user-select: "none";
+  user-select: "none";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-bottom: 2px solid #FD6186;
+  line-height: 32px; }
+
 @font-face {
   font-family: "zebra";
   src: url("/wp-content/themes/zebra/assets/fonts/zebra.eot?bjccwh");
@@ -1350,7 +1368,6 @@ body {
 body,
 html {
   font-family: "Roboto Mono", monospace;
-  font-size: 13px;
   line-height: 1.33em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -1358,8 +1375,12 @@ html {
 img {
   max-width: 100%; }
 
-a:hover {
-  color: #FD6186; }
+a {
+  color: white; }
+  .bg-white a {
+    color: black; }
+  a:hover {
+    color: #FD6186; }
 
 section {
   position: relative;
@@ -1372,7 +1393,7 @@ section {
         width: 50%; } }
 
 section.tour {
-  height: 80vh; }
+  margin-bottom: 10%; }
 
 section.final-image {
   height: auto;
@@ -1396,6 +1417,17 @@ h1 {
   width: 100%; }
   .mob-open .page-width {
     width: 100vw; }
+
+.grid-2 {
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  grid-gap: 1rem;*/
+  text-align: center; }
+  .grid-2 img {
+    width: 100%; }
+    @media only screen and (min-width: 750px) {
+      .grid-2 img {
+        width: 80%; } }
 
 .tabStyle, ul.tabs li, .circle-btn {
   font-size: 11px;

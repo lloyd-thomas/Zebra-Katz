@@ -1,7 +1,6 @@
 body,
 html {
   font-family: $base-font-family;
-  font-size: 13px;
   line-height: 1.33em;
   box-sizing: border-box;
 }
@@ -11,9 +10,14 @@ img {
 }
 
 a{
+  color:white;
+  .bg-white &{
+    color:black;
+  }
   &:hover{
     color:$color-accent;
   }
+
 }
 section {
   position: relative;
@@ -28,7 +32,7 @@ section {
 }
 
 section.tour{
-  height:80vh;
+  margin-bottom: 10%;
 }
 section.final-image{
     height: auto;
@@ -56,6 +60,20 @@ h1{
   width:100%;
   .mob-open &{
     width:100vw;
+
+  }
+}
+
+.grid-2{
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  grid-gap: 1rem;*/
+  text-align: center;
+  img{
+    width:100%;
+    @include media-query($medium-up) {
+      width:80%;
+    }
 
   }
 }

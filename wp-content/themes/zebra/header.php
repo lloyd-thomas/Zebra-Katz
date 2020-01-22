@@ -53,7 +53,7 @@
       </div>
     </div>
   </header>
-  <div class="page-width" style="margin:6rem auto">
+  <div class="page-width" style="margin:6rem auto 3rem">
     <div id="logo" class="logo-wrapper">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-zebrakatz-animated.svg">
     </div>
