@@ -45,11 +45,23 @@ section.final-image{
 }
 
 h1{
-  font-size: 3em;
+  font-size: 4em;
   font-weight: normal;
   text-transform: uppercase;
   font-family: $font-stack-header;
 }
+
+big{
+  text-transform: uppercase;
+  font-family: $font-stack-header;
+  display: block;
+  font-size: 4em;
+  line-height: 100%;
+  @include media-query($medium-up) {
+    font-size: 5em;
+  }
+}
+
 #main {}
 
 .page-width {
