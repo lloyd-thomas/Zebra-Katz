@@ -36,7 +36,7 @@
 
 
 
-<body <?php body_class($my_class); ?>>
+<body>
   <header>
     <div class="page-width">
       <div class="header-strip-wrapper">
@@ -44,6 +44,10 @@
           <?php include get_template_directory() . '/parts/snippets/social-icons.php'; ?>
         </div>
         <div class="anim2">
+          <div id="mobile-menu">
+            <div id="open-menu" class="mobile-btn-wrapper"><div class="icon-burger"></div></div>
+            <div id="close-menu" class="mobile-btn-wrapper"><div class="icon-close"></div></div>
+          </div>
           <?php include get_template_directory() . '/parts/snippets/mailchimp.php'; ?>
         </div>
       </div>

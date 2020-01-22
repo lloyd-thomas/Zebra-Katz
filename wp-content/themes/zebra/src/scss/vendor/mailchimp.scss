@@ -1,29 +1,44 @@
-#mc_embed_signup{
-  clear:left;
-  form{
-    padding:0 !important;
+#mc_embed_signup {
+  form {
+    padding: 0;
   }
-  input.email{
-    font-family: $base-font-family !important;
-    border-radius: 0 !important;
+
+  input.email {
+    font-family: $base-font-family;
+    border-radius: 0;
     background: black;
     border-style: dashed;
-    color:white;
-    margin-bottom: 0 !important;
+    color: white;
+    margin-bottom: 0;
+    width: auto;
+    display: none;
+    @include media-query($medium-up) {
+      display: block;
+    }
   }
-  .button{
-    background-color: transparent !important;
-    font-family: $base-font-family;
-    border-bottom: 2px solid $color-accent !important;
-    border-radius: 0 !important;
-    text-transform: uppercase;
-    padding:0 !important;
-    margin: 0 !important;
 
+  input.button {
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    font-family: $base-font-family;
+    border-bottom: 2px solid $color-accent;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    width: auto;
+   &:hover{
+     background: none;
+     color:$color-accent;
+   }
   }
 }
 
-#mc_embed_signup_scroll{
-  display: flex;
+#mc_embed_signup_scroll {
   align-items: center;
+  text-align: center;
+  @include media-query($medium-up) {
+    display: flex;
+  }
 }

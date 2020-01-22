@@ -1358,12 +1358,18 @@ html {
 img {
   max-width: 100%; }
 
+a:hover {
+  color: #FD6186; }
+
 section {
   position: relative;
   width: 100vw; }
   section img {
-    width: 50%;
+    width: 100%;
     max-width: none; }
+    @media only screen and (min-width: 750px) {
+      section img {
+        width: 50%; } }
 
 section.tour {
   height: 80vh; }
@@ -1385,7 +1391,11 @@ h1 {
 .page-width {
   max-width: 984px;
   margin: auto;
-  position: relative; }
+  position: relative;
+  padding: 0;
+  width: 100%; }
+  .mob-open .page-width {
+    width: 100vw; }
 
 .tabStyle, ul.tabs li, .circle-btn {
   font-size: 11px;
@@ -1417,30 +1427,109 @@ ul.tabs {
 header {
   margin: 1.5rem 0; }
   header .header-strip-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media only screen and (min-width: 750px) {
+      header .header-strip-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
 
 .logo-wrapper {
   width: 360px;
   margin: auto; }
 
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 21px;
+  z-index: 999; }
+  @media only screen and (min-width: 750px) {
+    #mobile-menu {
+      display: none; } }
+
+#close-menu {
+  display: none; }
+
 .social-wrapper ul {
+  display: none;
   margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  font-size: 1.25rem; }
-  .social-wrapper ul li {
-    padding-right: 1em; }
+  padding: 0; }
+  @media only screen and (min-width: 750px) {
+    .social-wrapper ul {
+      margin: 0;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      list-style: none;
+      font-size: 1.25rem; }
+      .social-wrapper ul li {
+        padding-right: 1em; } }
+
+.subscribe-wrapper {
+  display: none; }
+  @media only screen and (min-width: 750px) {
+    .subscribe-wrapper {
+      display: block; } }
+
+body.mob-open #close-menu {
+  display: block; }
+
+body.mob-open #open-menu {
+  display: none; }
+
+body.mob-open .page-width {
+  height: 100%; }
+
+body.mob-open header {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 999; }
+  body.mob-open header .subscribe-wrapper {
+    display: block; }
+  body.mob-open header .social-wrapper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 70vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 24px;
+    width: auto; }
+    body.mob-open header .social-wrapper ul li {
+      display: inline-block; }
+
+.mobile-btn-wrapper {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin: 1rem;
+  background: rgba(253, 97, 134, 0.3);
+  border: 2px solid #FD6186; }
+  .mobile-btn-wrapper div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 .circle-btn {
   display: inline-block;
@@ -1461,30 +1550,44 @@ header {
     background: white; }
 
 /*================ VENDOR ================*/
-#mc_embed_signup {
-  clear: left; }
-  #mc_embed_signup form {
-    padding: 0 !important; }
-  #mc_embed_signup input.email {
-    font-family: "Roboto Mono", monospace !important;
-    border-radius: 0 !important;
-    background: black;
-    border-style: dashed;
-    color: white;
-    margin-bottom: 0 !important; }
-  #mc_embed_signup .button {
-    background-color: transparent !important;
-    font-family: "Roboto Mono", monospace;
-    border-bottom: 2px solid #FD6186 !important;
-    border-radius: 0 !important;
-    text-transform: uppercase;
-    padding: 0 !important;
-    margin: 0 !important; }
+#mc_embed_signup form {
+  padding: 0; }
+
+#mc_embed_signup input.email {
+  font-family: "Roboto Mono", monospace;
+  border-radius: 0;
+  background: black;
+  border-style: dashed;
+  color: white;
+  margin-bottom: 0;
+  width: auto;
+  display: none; }
+  @media only screen and (min-width: 750px) {
+    #mc_embed_signup input.email {
+      display: block; } }
+
+#mc_embed_signup input.button {
+  display: inline-block;
+  color: white;
+  background-color: transparent;
+  font-family: "Roboto Mono", monospace;
+  border-bottom: 2px solid #FD6186;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  width: auto; }
+  #mc_embed_signup input.button:hover {
+    background: none;
+    color: #FD6186; }
 
 #mc_embed_signup_scroll {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-align: center; }
+  @media only screen and (min-width: 750px) {
+    #mc_embed_signup_scroll {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }

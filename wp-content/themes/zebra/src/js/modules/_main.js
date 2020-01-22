@@ -1,4 +1,5 @@
 
+//Animate stuff in
 var timeline = anime.timeline();
 timeline
   .add({
@@ -23,14 +24,23 @@ timeline
     easing: 'easeInExpo'
   })
 
-  // Accepts any class name
-  var rellax = new Rellax('.rellax', {
-    vertical: true,
-horizontal: false,
-      center: true,
-      round: true,
-    });
+// Parallax scrolling
+var rellax = new Rellax('.rellax', {
+  vertical: true,
+  horizontal: false,
+  center: true,
+  round: true,
+});
 
-      AOS.init({
-        mirror: true
-      });
+//Animate on scroll
+AOS.init({
+  mirror: true
+});
+
+//Functions
+$('#open-menu').on('click', function () {
+  $('body').addClass('mob-open');
+});
+$('#close-menu').on('click', function () {
+  $('body').removeClass('mob-open');
+});

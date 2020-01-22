@@ -10,12 +10,20 @@ img {
   max-width: 100%;
 }
 
+a{
+  &:hover{
+    color:$color-accent;
+  }
+}
 section {
   position: relative;
   width: 100vw;
   img{
-    width:50%;
+    width:100%;
     max-width:none;
+    @include media-query($medium-up) {
+    width: 50%;
+    }
   }
 }
 
@@ -44,6 +52,12 @@ h1{
   max-width: $width-site;
   margin: auto;
   position: relative;
+  padding:0;
+  width:100%;
+  .mob-open &{
+    width:100vw;
+
+  }
 }
 
 .tabStyle {

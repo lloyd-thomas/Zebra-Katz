@@ -22,22 +22,24 @@ function mytheme_enqueue_scripts() {
     wp_register_script( 'anime', 'https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js', null, null, true );
     wp_enqueue_script('anime');
 
+    wp_enqueue_style( "mailchimp", '//cdn-images.mailchimp.com/embedcode/slim-10_7.css');
+
 
     /**
      * Development styles and scripts
      * Use when in development mode (using `yarn start`)
      * Comment out when in production mode
      */
-/*
-     wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.js", array( "jquery" ), "", true );
-     wp_enqueue_style( "theme-bundle-css", get_template_directory_uri() . "/assets/app.bundle.css", array(), "", "all" );*/
+
+//     wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.js", array( "jquery" ), "", true );
+  //   wp_enqueue_style( "theme-bundle-css", get_template_directory_uri() . "/assets/app.bundle.css", array(), "", "all" );
 
     /**
      * Production styles and scripts
      * Use when in production mode (after using `yarn build`)
      * Comment out when in development mode
      */
-     wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.min.js", array( "jquery" ), "", true );
+  wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.min.js", array( "jquery" ), "", true );
      wp_enqueue_style( "theme-bundle-css", get_template_directory_uri() . "/assets/app.bundle.min.css", array(), "", "all" );
 
   }
