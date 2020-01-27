@@ -1494,8 +1494,10 @@ header .header-strip-wrapper {
               justify-content: space-between; } }
 
 .logo-wrapper {
-  width: 360px;
   margin: auto; }
+  @media only screen and (min-width: 750px) {
+    .logo-wrapper {
+      width: 360px; } }
 
 #mobile-menu {
   position: fixed;

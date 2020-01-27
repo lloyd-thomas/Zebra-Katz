@@ -13,7 +13,9 @@ header {
 }
 
 .logo-wrapper {
-  width: 360px;
+    @include media-query($medium-up) {
+    width: 360px;
+  }
   margin: auto;
 }
 
