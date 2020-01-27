@@ -3,10 +3,12 @@ html {
   font-family: $base-font-family;
   line-height: 1.33em;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
+  display: inline-block;
 }
 
 a{
