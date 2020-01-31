@@ -23,8 +23,8 @@ if( function_exists('acf_add_options_sub_page') )
 
 add_theme_support( 'post-thumbnails' );
 
-
-//add_action('init', 'custom_post_type_videos');
+/*
+add_action('init', 'custom_post_type_videos');
 
 add_action('init', 'custom_post_type_brands');
 function custom_post_type_brands()
@@ -59,15 +59,15 @@ function custom_post_type_brands()
     'supports' => array('title','editor','author','thumbnail')
   );
   register_post_type('brand',$args);
-}
+}*/
 
 //Add in videos custom post type
 add_action('init', 'custom_post_type_videos');
 function custom_post_type_videos()
 {
   $labels = array(
-    'name' => _x('videos', 'post type general name'),
-    'singular_name' => _x('videos', 'post type singular name'),
+    'name' => _x('Videos', 'post type general name'),
+    'singular_name' => _x('Video', 'post type singular name'),
     'add_new' => _x('Add New', 'Video'),
     'add_new_item' => __('Add New Video'),
     'edit_item' => __('Edit Video'),
@@ -98,22 +98,22 @@ function custom_post_type_videos()
 }
 
 //Add in videos custom post type
-add_action('init', 'custom_post_type_press');
-function custom_post_type_press()
+add_action('init', 'custom_post_type_music');
+function custom_post_type_Music()
 {
   $labels = array(
-    'name' => _x('press', 'post type general name'),
-    'singular_name' => _x('press', 'post type singular name'),
-    'add_new' => _x('Add New', 'press'),
-    'add_new_item' => __('Add New press'),
-    'edit_item' => __('Edit press'),
-    'new_item' => __('New press'),
-    'view_item' => __('View press'),
-    'search_items' => __('Search press'),
-    'not_found' =>  __('No press found'),
-    'not_found_in_trash' => __('No press found in Trash'),
+    'name' => _x('Music', 'post type general name'),
+    'singular_name' => _x('Music', 'post type singular name'),
+    'add_new' => _x('Add New', 'Music'),
+    'add_new_item' => __('Add New Music'),
+    'edit_item' => __('Edit Music'),
+    'new_item' => __('New Music'),
+    'view_item' => __('View Music'),
+    'search_items' => __('Search Music'),
+    'not_found' =>  __('No Music found'),
+    'not_found_in_trash' => __('No Music found in Trash'),
     'parent_item_colon' => '',
-    'menu_name' => 'press'
+    'menu_name' => 'Music'
   );
   $args = array(
     'labels' => $labels,
@@ -123,26 +123,17 @@ function custom_post_type_press()
     'show_in_menu' => true,
     'query_var' => true,
     'capability_type' => 'post',
-    'rewrite' => array('slug'=>'press'),
+    'rewrite' => array('slug'=>'music'),
     'has_archive' => true,
     'hierarchical' => false,
     'taxonomies' => array(),
-    'menu_icon' => 'dashicons-text-page',
-    'supports' => array('title','editor','author','thumbnail')
+    'menu_icon' => 'dashicons-format-audio',
+    'supports' => array('title','editor','author')
   );
-  register_post_type('press',$args);
+  register_post_type('music',$args);
 }
 
-// split content at the more tag and return an array
-function split_content() {
-	global $more;
-	$more = true;
-	$content = preg_split('/<span id="more-\d+"><\/span>/i', get_the_content('more'));
-	for($c = 0, $csize = count($content); $c < $csize; $c++) {
-		$content[$c] = apply_filters('the_content', $content[$c]);
-	}
-	return $content;
-}
+
 
 function catch_that_image() {
   global $post, $posts;

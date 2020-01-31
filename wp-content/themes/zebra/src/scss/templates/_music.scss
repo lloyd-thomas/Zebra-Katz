@@ -1,0 +1,11 @@
+section.music{
+  margin-top:-24px;
+  background-size: cover;
+  background-repeat: none;
+  .inner{
+    padding: 10rem 0;
+    iframe{
+      @extend .effect8;
+    }
+  }
+}

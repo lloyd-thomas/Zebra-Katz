@@ -22,6 +22,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cleartype" content="on">
   <?php wp_head(); ?>
+
+
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -32,6 +35,16 @@
 		echo "<script type=\"text/javascript\" id=\"__bs_script__\">document.write(\"<script async src='http://HOST:3000/browser-sync/browser-sync-client.js'><\/script>\".replace(\"HOST\", window.location.hostname));</script>";
 	}
 ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157146311-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-157146311-1');
+</script>
+
 </head>
 
 
@@ -53,8 +66,28 @@
       </div>
     </div>
   </header>
-  <div class="page-width" style="margin:6rem auto 3rem">
+  <div id="hero" class="page-width">
     <div id="logo" class="logo-wrapper">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-zebrakatz-animated.svg">
     </div>
+  </div>
+  <div id="menu">
+
+    <ul id="filter-options">
+      <?php
+      if(is_page_template( 'page-home.php' )){
+        ?>
+      <li><input type="checkbox" value="filter_music" id="filter-music" data-filter_id="music"><label for="filter-music">Music</label></li>
+      <li><input type="checkbox" value="filter_video" id="filter_video" data-filter_id="videos"><label for="filter-video">Videos</label></li>
+      <li><input type="checkbox" value="filter_merchandise" id="filter_merchandise" data-filter_id="merchandise"><label for="filter-merchandise">Merchandise</label></li>
+      <li><input type="checkbox" value="filter_photos" id="filter_photos" data-filter_id="Photos"><label for="filter-photos">Photos</label></li>
+      <li><a class="btn" href="/about">About</a></li>
+    <?php }else{ ?>
+      <li><a href="<?php echo home_url(); ?>/#music">Music</a></li>
+      <li><a href="<?php echo home_url(); ?>/#videos">Videos</a></li>
+      <li><a href="<?php echo home_url(); ?>/#merchandise">Merchandise</a></li>
+      <li><a href="<?php echo home_url(); ?>/#photos">Photos</a></li>
+      <li><a class="btn">About</a></li>
+  <?php  } ?>
+    </ul>
   </div>

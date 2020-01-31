@@ -33,7 +33,9 @@
 @import "globals/buttons";
 
 // Our templates
-@import "templates/home";
+@import "templates/music";
+@import "templates/about";
 
 /*================ VENDOR ================*/
 @import "vendor/mailchimp";
+@import "vendor/wp-gallery_override";

@@ -1,0 +1,15 @@
+.blocks-gallery-item {
+    @include media-query($medium-up) {
+      figure{
+        justify-content: space-around !important;
+      }
+      img{
+        max-width:80%!important;
+
+      }
+    }
+  figcaption{
+    display: none;
+
+  }
+}

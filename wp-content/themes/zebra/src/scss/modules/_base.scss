@@ -1,9 +1,11 @@
 body,
 html {
   font-family: $base-font-family;
-  line-height: 1.33em;
+  line-height: 1.5em;
   box-sizing: border-box;
   overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -25,6 +27,7 @@ a{
 section {
   &.bg-white{
     background: white;
+    color:black;
   }
   position: relative;
   width: 100vw;
@@ -34,6 +37,9 @@ section {
     @include media-query($medium-up) {
     width: 50%;
     }
+  }
+  article{
+    padding:6rem 0;  
   }
 }
 
@@ -68,6 +74,10 @@ big{
     font-size: 5em;
   }
 }
+p{
+  letter-spacing:0.01em;
+}
+
 
 #main {}
 
@@ -133,4 +143,8 @@ ul.tabs {
 
 .anim1,.anim2,.anim3{
   opacity: 0;
+}
+
+.entry-content.aos-animate {
+  transition-delay: 0.4s;
 }

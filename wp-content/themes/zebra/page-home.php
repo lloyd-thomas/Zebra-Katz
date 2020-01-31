@@ -2,32 +2,24 @@
 /** Template Name: Index Page*/
 
 ?>
-<?php get_header(); ?>
+<?php
 
-
+get_header(); ?>
 <main>
-  <section class="wrapper single-image">
 
-    <div style="background:black;">
-      <div class="anim3 page-width text-center">
-        <div style="margin-bottom:5em;">
-          <img  src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
+
+
+  <section class="wrapper single-image filter_music">
+    <div class="anim3 page-width text-center">
+        <img  src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
           <div class="m-t m-b">
           <big class="p-t">Less is moor</big>
           <div class="m-b text-upper"><a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn">Pre-Save Digital Album Today &Rarr; </a></div>
         </div>
-      </div>
-    </div>
     </div>
 
   </section>
-  <section class="wrapper bg-white multi-image" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2)">
-    <div class="grid-2 p-b" style="padding-top:10%">
-      <div class="rellax" data-rellax-speed="-0.5" data-rellax-percentage="0.5"><img data-aos="fade-right" data-aos-duration="1000" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ZK_Vinyl_4.jpg"></div>
-      <div class="rellax" data-rellax-speed="-0.5" data-rellax-percentage="0.5"><img data-aos="fade-left" data-aos-duration="1000" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ZK_Vinyl_3.jpg"></div>
-      <div class="p-b text-upper rellax" data-rellax-speed="0" data-rellax-zindex="5" style="z-index:9"><a target="_blank" href="https://thevinylfactory.com/product/less-is-moor/" class="btn">Pre-Order Vinyl Album &Rarr;</a></div>
-    </div>
-  </section>
+
   <section class="wrapper tour" style="background:white">
     <div style="background:black;-webkit-clip-path: url(#mask);clip-path: url(#mask);">
     <div class="page-width text-center" data-aos="zoom-out">
@@ -37,21 +29,65 @@
     </div>
   </div>
   </section>
-  <section class="wrapper single-image bg-white p-b" style="-webkit-clip-path: url(#mask3);clip-path: url(#mask3)">
 
-    <div class="page-width text-center">
-        <div style="padding:10% 10% 0 10%; font-size:16px">
-          <a href="https://awal.ffm.to/zk-ish"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ZK_ISH_1080x1920_Instagram_Story.jpg"></a>
-        </div>
-        <div class="m-b m-t text-upper"><a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn">Latest single "Ish" &Rarr; </a></div>
+  <?php
 
-    </div>
+  // check if the repeater field has rows of data
+  if( have_rows('home_page_posts') ):
 
-  </section>
+   	// loop through the rows of data
+      while ( have_rows('home_page_posts') ) :
+        the_row();
+        if(get_sub_field('color')){
+          $bg_color = get_sub_field('color');
+        }
+        if(get_sub_field('background_image')){
+          $bg_image = get_sub_field('background_image');
+        }
 
-<!--  <section class="wrapper final-image" style="-webkit-clip-path: url(#mask2);clip-path: url(#mask2);background:white;">
-    <img class="rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.5" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer.jpg">
-  </section>-->
+
+        $post_objects = get_sub_field('content');
+          // display a sub field value
+          if( $post_objects ):
+            $temp_post = $post;
+
+            foreach( $post_objects as $post):
+              setup_postdata($post);
+              $postType = get_post_type_object(get_post_type($post));
+
+              if ($postType) {
+                  $postTypeName =  esc_html($postType->labels->singular_name);
+                  switch($postTypeName):
+                    case 'Video':
+                      get_template_part('parts/posts/content', 'video');
+                    break;
+                    case 'Music':
+                      include(locate_template('parts/posts/content-music.php'));
+                    break;
+                    case 'Post':
+                      get_template_part('parts/posts/content');
+                    break;
+                    endswitch;
+              }
+
+            endforeach;
+            $post = $temp_post;
+            $bg_color = "";
+          //  $bg_image = "";
+
+          endif; //if( $post_objects ):
+        //the_sub_field('title');
+
+      endwhile;
+
+  else :
+
+      // no rows found
+
+  endif;
+  wp_reset_postdata();
+
+  ?>
 
   <svg width="0" height="0">
     <defs>
@@ -78,5 +114,7 @@
   </svg>
 
 
+
 </main>
+
 <?php get_footer(); ?>

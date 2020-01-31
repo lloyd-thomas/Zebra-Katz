@@ -44,3 +44,54 @@ $('#open-menu').on('click', function () {
 $('#close-menu').on('click', function () {
   $('body').removeClass('mob-open');
 });
+
+
+function  callfilter(value)
+{
+    //alert(value);
+     $('#'+value).prop("checked", true);
+       	$('main > section').hide();
+       	$('#filter-options :checkbox:checked').each(function()
+       	{
+           $('.' + $(this).val()).fadeIn();
+		});
+
+        if($('#filter-options :checkbox').filter(':checked').length < 1)
+        {
+        	$('main > section').fadeIn();
+
+        }
+          AOS.refresh();
+        }
+
+var hash = window.location.hash;
+
+
+if (hash) {
+        var hash = 'filter_' + location.hash.substr(1).split("|");
+
+        $('#filter-options :checkbox[value=' + hash + ' ]').trigger('click');
+        callfilter(hash);
+    /*   hash.forEach(function(value) {
+      $("input[value=" + value + "]").prop("checked", true);
+    });*/
+    }
+
+//Filter posts
+$('#filter-options :checkbox').click(function(){
+  //callfilter($(this).val());
+  $(this.val).prop("checked", true);
+     $('main > section').hide();
+     $('#filter-options :checkbox:checked').each(function()
+     {
+        $('.' + $(this).val()).fadeIn();
+ });
+
+     if($('#filter-options :checkbox').filter(':checked').length < 1)
+     {
+       $('main > section').fadeIn();
+
+     }
+       AOS.refresh();
+     }
+);
