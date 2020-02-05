@@ -1,5 +1,7 @@
 header {
+
   @include media-query($medium-up) {
+  padding:0 2rem;
   margin: 1.5rem 0;
 }
 
@@ -13,14 +15,58 @@ header {
 }
 
 .logo-wrapper {
-    @include media-query($medium-up) {
-    width: 360px;
+
+  margin: 48px auto 0;
+  @include media-query($medium-up) {
+    margin: 0 auto;
+    width: 288px;
   }
-  margin: auto;
+
+  transition: all 0.23s ease-in-out 0s;
 }
 
 #hero{
-  margin:3rem auto;
+  margin:0 auto 1rem;
+}
+
+
+#filter-options {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  justify-content: center;
+  li {
+    margin:0 .5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+
+    a{
+      @extend .btn;
+    }
+  }
+  label{
+    @extend .btn;
+    border-bottom: 2px solid transparent;
+  }
+  input[type=radio] {
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: absolute;
+    &:checked + label {
+    border-bottom: 2px solid $color-accent;
+    }
+  }
+  @include media-query($medium-up) {
+    display: flex;
+  }
 }
 
 #mobile-menu {
@@ -44,6 +90,7 @@ header {
     display: none;
     margin:0;
     padding: 0;
+
     @include media-query($medium-up) {
       margin: 0;
       padding: 0;
@@ -65,6 +112,29 @@ header {
 }
 
 body.mob-open {
+  .ordering-wrapper{
+    display: flex;
+    flex-direction: column;
+    .flex-item{
+      &:nth-of-type(1) {
+        order: 3;
+      }
+    }
+  }
+  main{
+    display: none;
+  }
+  #filter-options{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    li{
+      margin:6px;
+    }
+  }
   #close-menu {
     display: block;
   }
@@ -90,19 +160,12 @@ body.mob-open {
     .subscribe-wrapper {
       display: block;
     }
-
+    .logo-wrapper{
+      margin-top: 1rem;
+      width:120px;
+    }
     .social-wrapper ul {
-      display: flex;
-      height: 70vh;
-      flex-direction: column;
-      text-align: center;
-      justify-content: space-evenly;
-      font-size: 24px;
-      width: auto;
-
-      li {
-        display: inline-block;
-      }
+     display: none;
     }
   }
 }
@@ -122,4 +185,8 @@ body.mob-open {
     top:50%;
     transform: translate(-50%,-50%);
   }
+}
+
+a.selected{
+  border-bottom:2px solid $color-accent !important;
 }

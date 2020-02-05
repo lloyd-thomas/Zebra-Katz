@@ -39,7 +39,13 @@ section {
     }
   }
   article{
-    padding:6rem 0;  
+      padding:3rem 0;
+      h1{
+        margin-top: 0;
+      }
+    @include media-query($medium-up) {
+      padding:6rem 0;
+    }
   }
 }
 
@@ -147,4 +153,17 @@ ul.tabs {
 
 .entry-content.aos-animate {
   transition-delay: 0.4s;
+}
+iframe{
+  max-width:fit-content;
+  @include media-query($medium-up) {
+      max-width:none;
+  }
+  &.songkick-widget{
+      max-width:none;
+  }
+}
+
+.underline{
+    border-bottom: 2px solid $color-accent;
 }

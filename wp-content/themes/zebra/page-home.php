@@ -11,23 +11,15 @@ get_header(); ?>
 
   <section class="wrapper single-image filter_music">
     <div class="anim3 page-width text-center">
+      <article style="padding-top:2rem;">
         <img  src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
           <div class="m-t m-b">
           <big class="p-t">Less is moor</big>
-          <div class="m-b text-upper"><a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn">Pre-Save Digital Album Today &Rarr; </a></div>
+          <div class="m-b text-upper"><a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn underline">Pre-Save Digital Album Today &Rarr; </a></div>
         </div>
+      </article>
     </div>
 
-  </section>
-
-  <section class="wrapper tour" style="background:white">
-    <div style="background:black;-webkit-clip-path: url(#mask);clip-path: url(#mask);">
-    <div class="page-width text-center" data-aos="zoom-out">
-      <div style="color:white;padding:10% 0; font-size:16px">
-        <?php include get_template_directory() . '/parts/snippets/songkick.php'; ?>
-      </div>
-    </div>
-  </div>
   </section>
 
   <?php
@@ -88,6 +80,15 @@ get_header(); ?>
   wp_reset_postdata();
 
   ?>
+  <section class="wrapper tour filter_live">
+    <div style="background:black;-webkit-clip-path: url(#mask);clip-path: url(#mask);">
+    <div class="page-width text-center" data-aos="zoom-out">
+      <article>
+        <?php include get_template_directory() . '/parts/snippets/songkick.php'; ?>
+      </article>
+    </div>
+  </div>
+  </section>
 
   <svg width="0" height="0">
     <defs>

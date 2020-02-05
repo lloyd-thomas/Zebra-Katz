@@ -1,5 +1,6 @@
+.btn
 /*================ Links & Buttons ================*/
-.btn {
+ {
   @include prefix('user-select', 'none', moz ms webkit spec);
   @include prefix(appearance, none, webkit moz spec);
 
@@ -10,7 +11,12 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  border-bottom: 2px solid $color-accent;
+  //border-bottom: 2px solid $color-accent;
   line-height: 32px;
-  
+  border-bottom: 2px solid transparent;
+  transition: all 0.23s ease-in-out 0s;
+  &:hover{
+    color: $color-accent;
+    border-bottom: 2px solid $color-accent;
+  }
 }

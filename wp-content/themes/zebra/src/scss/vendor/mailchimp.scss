@@ -22,16 +22,33 @@
     color: white;
     background-color: transparent;
     font-family: $base-font-family;
-    border-bottom: 2px solid $color-accent;
+    font-weight: 600;
+  //  border-bottom: 2px solid $color-accent;
     border-radius: 0;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
     width: auto;
-   &:hover{
-     background: none;
-     color:$color-accent;
-   }
+
+
+  }
+  .button-submit-wrapper{
+    transition: all 0.23s ease-in-out 0s;
+    &:hover{
+      color:$color-accent;
+      input.button {
+        color:$color-accent;
+        background: none;
+      }
+
+    }
+    &::after{
+      content:"\21A0";
+      position: absolute;
+      top:4px;
+      right:-8px;
+      height:32px;
+    }
   }
 }
 

@@ -1,10 +1,10 @@
-.link-template-default.thumbnail .wpdm-download-link.btn{
+.link-template-default.thumbnail .wpdm-download-link{
   font-size: 1rem;
 }
 
 
 .w3eden{
-  .btn-primary{
+  -primary{
     background-color: $color-accent;
     &:hover{
       background-color: shade($color-accent,50%);
@@ -13,7 +13,7 @@
  .pull-left{
    display: none;
   }
-  .btn{
+  {
     border-radius: 0 !important;
   }
   .link-template-default{

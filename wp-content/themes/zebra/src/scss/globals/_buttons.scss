@@ -1,20 +1,22 @@
-.circle-btn{
- @extend .tabStyle;
- display: inline-block;
- width:15px;
- height:15px;
- margin:0 2px;
- padding:0;
- position: relative;
- background: rgba($color-active,.1);
- i{
-   position: absolute;
-   left:50%;
-   top:50%;
-   transform:translate(-50%,-50%);
-   font-size: 7px;
- }
- &:hover{
-   background:$color-active;
- }
+.circle-btn {
+  @extend .tabStyle;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  padding: 0;
+  position: relative;
+  background: rgba($color-active,.1);
+
+  i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 7px;
+  }
+
+  &:hover {
+    background: $color-active;
+  }
 }

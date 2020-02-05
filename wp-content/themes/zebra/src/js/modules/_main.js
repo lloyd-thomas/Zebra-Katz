@@ -1,4 +1,3 @@
-
 //Animate stuff in
 var timeline = anime.timeline();
 timeline
@@ -12,7 +11,7 @@ timeline
   .add({
     targets: '.anim2',
     opacity: 1,
-    //delay: 1000,
+    delay: 1000,
     duration: 1000,
     easing: 'easeInExpo'
   })
@@ -33,65 +32,49 @@ var rellax = new Rellax('.rellax', {
 });
 
 //Animate on scroll
+
+
 AOS.init({
-  mirror: true
+  mirror: true,
+  duration: 800,
+  easing: 'ease-in-sine',
 });
 
 //Functions
-$('#open-menu').on('click', function () {
+$('#open-menu').on('click', function() {
   $('body').addClass('mob-open');
 });
-$('#close-menu').on('click', function () {
+$('#close-menu').on('click', function() {
   $('body').removeClass('mob-open');
 });
 
+function removeHash() {
+  history.pushState("", document.title, window.location.pathname +
+    window.location.search);
+}
 
-function  callfilter(value)
-{
-    //alert(value);
-     $('#'+value).prop("checked", true);
-       	$('main > section').hide();
-       	$('#filter-options :checkbox:checked').each(function()
-       	{
-           $('.' + $(this).val()).fadeIn();
-		});
-
-        if($('#filter-options :checkbox').filter(':checked').length < 1)
-        {
-        	$('main > section').fadeIn();
-
-        }
-          AOS.refresh();
-        }
+function callfilter(value) {
+  $('body').removeClass('mob-open');
+  $('main > section').hide();
+  $('.' + value).fadeIn();
+  AOS.refresh();
+}
 
 var hash = window.location.hash;
 
 
 if (hash) {
-        var hash = 'filter_' + location.hash.substr(1).split("|");
-
-        $('#filter-options :checkbox[value=' + hash + ' ]').trigger('click');
-        callfilter(hash);
-    /*   hash.forEach(function(value) {
-      $("input[value=" + value + "]").prop("checked", true);
-    });*/
-    }
+  var hash = 'filter_' + location.hash.substr(1).split("|");
+  $('#filter-options :radio[value=' + hash + ' ]').trigger('click');
+  callfilter(hash);
+}
 
 //Filter posts
-$('#filter-options :checkbox').click(function(){
-  //callfilter($(this).val());
-  $(this.val).prop("checked", true);
-     $('main > section').hide();
-     $('#filter-options :checkbox:checked').each(function()
-     {
-        $('.' + $(this).val()).fadeIn();
- });
+$('#filter-options :radio').click(function() {
+  callfilter($(this).val());
+    removeHash();
+});
 
-     if($('#filter-options :checkbox').filter(':checked').length < 1)
-     {
-       $('main > section').fadeIn();
-
-     }
-       AOS.refresh();
-     }
-);
+$(window).on('load', function() {
+  AOS.refresh();
+});

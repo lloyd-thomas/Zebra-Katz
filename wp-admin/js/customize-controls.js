@@ -4812,13 +4812,13 @@
 	 */
 	api.HeaderControl = api.Control.extend(/** @lends wp.customize.HeaderControl.prototype */{
 		ready: function() {
-			this.btnRemove = $('#customize-control-header_image .actions .remove');
-			this.btnNew    = $('#customize-control-header_image .actions .new');
+			thisRemove = $('#customize-control-header_image .actions .remove');
+			thisNew    = $('#customize-control-header_image .actions .new');
 
 			_.bindAll(this, 'openMedia', 'removeImage');
 
-			this.btnNew.on( 'click', this.openMedia );
-			this.btnRemove.on( 'click', this.removeImage );
+			thisNew.on( 'click', this.openMedia );
+			thisRemove.on( 'click', this.removeImage );
 
 			api.HeaderTool.currentHeader = this.getInitialHeaderImage();
 
