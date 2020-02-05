@@ -3,7 +3,10 @@ section.music{
   background-size: cover;
   background-repeat: none;
   .inner{
-    padding: 10rem 0;
+    padding: 4rem 0;
+      @include media-query($medium-up) {
+        padding: 10rem 0;
+      }
     iframe{
       @extend .effect8;
     }
