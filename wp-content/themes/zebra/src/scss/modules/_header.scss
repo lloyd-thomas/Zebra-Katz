@@ -66,6 +66,7 @@ header {
   }
   @include media-query($medium-up) {
     display: flex;
+    margin:0 0 4rem;
   }
 }
 
