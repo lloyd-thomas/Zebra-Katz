@@ -91,7 +91,7 @@
             <?php }else{ ?>
             <li><a href="<?php echo home_url(); ?>/#music">Music</a></li>
             <li><a href="<?php echo home_url(); ?>/#live">live</a></li>
-            <li><a href="<?php echo home_url(); ?>/#videos">Videos</a></li>
+            <li><a href="<?php echo home_url(); ?>/#video">Videos</a></li>
             <li><a href="<?php echo home_url(); ?>/#merchandise">Merchandise</a></li>
             <li><a href="<?php echo home_url(); ?>/#photos">Photos</a></li>
             <li><a class="selected">About</a></li>
