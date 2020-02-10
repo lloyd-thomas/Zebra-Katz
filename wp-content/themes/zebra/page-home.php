@@ -33,6 +33,8 @@ get_header(); ?>
    	// loop through the rows of data
       while ( have_rows('home_page_posts') ) :
         the_row();
+        $bg_color = "";
+        $bg_image = "";
         if(get_sub_field('color')){
           $bg_color = get_sub_field('color');
         }
@@ -54,7 +56,7 @@ get_header(); ?>
                   $postTypeName =  esc_html($postType->labels->singular_name);
                   switch($postTypeName):
                     case 'Video':
-                      get_template_part('parts/posts/content', 'video');
+                      include(locate_template('parts/posts/content-video.php'));
                     break;
                     case 'Music':
                       include(locate_template('parts/posts/content-music.php'));
