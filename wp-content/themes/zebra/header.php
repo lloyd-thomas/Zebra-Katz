@@ -86,14 +86,14 @@
             <li><input type="radio" name="filter-radio" value="filter_live" id="filter-live" data-filter_id="music"><label for="filter-live">live</label></li>
             <li><input type="radio" name="filter-radio" value="filter_video" id="filter-video" data-filter_id="videos"><label for="filter-video">Videos</label></li>
             <li><input type="radio" name="filter-radio" value="filter_merchandise" id="filter-merchandise" data-filter_id="merchandise"><label for="filter-merchandise">Merchandise</label></li>
-            <li><input type="radio" name="filter-radio" value="filter_photos" id="filter-photos" data-filter_id="Photos"><label for="filter-photos">Photos</label></li>
+          <!--  <li><input type="radio" name="filter-radio" value="filter_photos" id="filter-photos" data-filter_id="Photos"><label for="filter-photos">Photos</label></li>-->
             <li><a href="/about">About</a></li>
             <?php }else{ ?>
             <li><a href="<?php echo home_url(); ?>/#music">Music</a></li>
             <li><a href="<?php echo home_url(); ?>/#live">live</a></li>
             <li><a href="<?php echo home_url(); ?>/#video">Videos</a></li>
             <li><a href="<?php echo home_url(); ?>/#merchandise">Merchandise</a></li>
-            <li><a href="<?php echo home_url(); ?>/#photos">Photos</a></li>
+          <!--  <li><a href="<?php echo home_url(); ?>/#photos">Photos</a></li> -->
             <li><a class="selected">About</a></li>
             <?php  } ?>
           </ul>

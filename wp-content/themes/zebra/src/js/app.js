@@ -1,7 +1,6 @@
 // Import Foundation
 // Import the apps styles
 import sass from '../scss/app.scss';
-//import '../node_modules/sticky-sidebar/dist/sticky-sidebar.js';
 
 import '../node_modules/@fortawesome/fontawesome-free';
 // Import our modules

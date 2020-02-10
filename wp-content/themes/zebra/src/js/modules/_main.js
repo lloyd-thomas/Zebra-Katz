@@ -78,3 +78,10 @@ $('#filter-options :radio').click(function() {
 $(window).on('load', function() {
   AOS.refresh();
 });
+
+///Slick slider
+$('.gallery-wrapper ul.blocks-gallery-grid').slick({
+  speed: 1000,
+  cssEase: 'linear',
+//  dots: true
+});

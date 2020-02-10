@@ -8,6 +8,9 @@ html {
 -webkit-font-smoothing: antialiased;
 }
 
+:focus {
+    outline: 0;
+}
 img {
   max-width: 100%;
   display: inline-block;
@@ -156,6 +159,7 @@ ul.tabs {
 }
 iframe{
   max-width:fit-content;
+
   @include media-query($medium-up) {
       max-width:none;
   }

@@ -16,7 +16,15 @@
  if (have_posts()) :
     while (have_posts()) :
        the_post();
-          the_content();
+
+          if ( in_category('photos') ) {
+              echo '<div class="gallery-wrapper">';
+              the_content();
+              echo '</div><!-- gallery-wrapper-->';
+            } else {
+              // Continue with normal Loop
+              the_content();
+            }
     endwhile;
  endif;
 ?>

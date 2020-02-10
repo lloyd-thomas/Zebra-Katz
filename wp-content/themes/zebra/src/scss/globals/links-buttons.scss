@@ -15,8 +15,46 @@
   line-height: 32px;
   border-bottom: 2px solid transparent;
   transition: all 0.23s ease-in-out 0s;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   &:hover{
+
     color: $color-accent;
     border-bottom: 2px solid $color-accent;
+  }
+}
+
+.btn-wrapper{
+  padding:1rem 1rem 1rem 1rem;
+  background-color: transparent;
+  display: inline-block;
+  border:2px solid black;
+  .btn{
+    color:black;
+    border-bottom: none;
+    &:after{
+      content: ' ↠';
+    }
+  }
+  &:hover{
+    background-color:black;
+      .btn{
+          color:white;
+      }
+      border:2px solid transparent;
+  }
+  .dark-bg &{
+    background-color:white;
+    background-color: transparent;
+    border:2px solid white;
+    .btn{
+      color:white;
+    }
+      &:hover{
+        background-color:white;
+          .btn{
+              color:black;
+          }
+      }
   }
 }

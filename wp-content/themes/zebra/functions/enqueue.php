@@ -16,6 +16,9 @@ function mytheme_enqueue_scripts() {
     wp_register_script( 'rellax', 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js', null, null, true );
     wp_enqueue_script('rellax');
 
+    wp_register_script( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',null, null, true );
+    wp_enqueue_script('slick');
+
     wp_register_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', null, null, true );
     wp_enqueue_script('aos');
 
@@ -31,8 +34,8 @@ function mytheme_enqueue_scripts() {
      * Comment out when in production mode
      */
 
-  /*   wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.js", array( "jquery" ), "", true );
-     wp_enqueue_style( "theme-bundle-css", get_template_directory_uri() . "/assets/app.bundle.css", array(), "", "all" );*/
+  //  wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.js", array( "jquery" ), "", true );
+  //  wp_enqueue_style( "theme-bundle-css", get_template_directory_uri() . "/assets/app.bundle.css", array(), "", "all" );
 
     /**
      * Production styles and scripts
@@ -40,7 +43,7 @@ function mytheme_enqueue_scripts() {
      * Comment out when in development mode
      */
 
-     wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.min.js", array( "jquery" ), "", true );
+  wp_enqueue_script( "theme-bundle-js", get_template_directory_uri() . "/assets/app.bundle.min.js", array( "jquery" ), "", true );
      wp_enqueue_style( "theme-bundle-css", get_template_directory_uri() . "/assets/app.bundle.min.css", array(), "", "all" );
 
 

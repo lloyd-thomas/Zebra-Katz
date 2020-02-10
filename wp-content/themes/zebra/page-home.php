@@ -9,13 +9,16 @@ get_header(); ?>
 
 
 
-  <section class="wrapper single-image filter_music">
+  <section class="wrapper single-image filter_music dark-bg">
     <div class="anim3 page-width text-center">
       <article style="padding-top:2rem;">
         <img  src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/packshot-Zebra-Katz-_LESS-IS-MOOR-_Album-Art_.jpg">
           <div class="m-t m-b">
           <big class="p-t">Less is moor</big>
-          <div class="m-b text-upper"><a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn underline">Pre-Save Digital Album Today &Rarr; </a></div>
+          <div class="m-b text-upper">
+            <div class="btn-wrapper">
+            <a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn underline">Pre-Save Digital Album Today</a></div>
+            </div>
         </div>
       </article>
     </div>
@@ -57,7 +60,7 @@ get_header(); ?>
                       include(locate_template('parts/posts/content-music.php'));
                     break;
                     case 'Post':
-                      get_template_part('parts/posts/content');
+                      include(locate_template('parts/posts/content.php'));
                     break;
                     endswitch;
               }
