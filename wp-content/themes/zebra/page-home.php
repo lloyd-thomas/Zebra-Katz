@@ -17,7 +17,7 @@ get_header(); ?>
           <big class="p-t">Less is moor</big>
           <div class="m-b text-upper">
             <div class="btn-wrapper">
-            <a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn underline">Pre-Save Digital Album Today</a></div>
+            <a target="_blank" href="https://zebakatz.ffm.to/lessismoor" class="btn underline">Pre-order Album</a></div>
             </div>
         </div>
       </article>
