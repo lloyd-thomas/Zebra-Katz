@@ -1300,7 +1300,8 @@ body {
     display: table;
     clear: both; }
 
-.btn, #filter-options li a, #filter-options label {
+/*================ Links & Buttons ================*/
+.btn, .btn-big, #filter-options li a, #filter-options label {
   -moz-user-select: "none";
   -ms-user-select: "none";
   -webkit-user-select: "none";
@@ -1320,34 +1321,53 @@ body {
   transition: all 0.23s ease-in-out 0s;
   font-weight: 600;
   letter-spacing: 0.1em; }
-  .btn:hover, #filter-options li a:hover, #filter-options label:hover {
+  .btn:hover, .btn-big:hover, #filter-options li a:hover, #filter-options label:hover {
     color: #FD6186;
     border-bottom: 2px solid #FD6186; }
 
+.btn-big {
+  display: inline-block;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black; }
+  .btn-big span:after {
+    content: ' \21A0'; }
+  .btn-big:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid transparent; }
+  .dark-bg .btn-big {
+    border: 2px solid white;
+    color: white; }
+    .dark-bg .btn-big:hover {
+      background-color: white;
+      color: black; }
+
 .btn-wrapper {
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
   background-color: transparent;
   display: inline-block;
   border: 2px solid black; }
-  .btn-wrapper .btn, .btn-wrapper #filter-options li a, #filter-options li .btn-wrapper a, .btn-wrapper #filter-options label, #filter-options .btn-wrapper label {
+  .btn-wrapper .btn, .btn-wrapper .btn-big, .btn-wrapper #filter-options li a, #filter-options li .btn-wrapper a, .btn-wrapper #filter-options label, #filter-options .btn-wrapper label {
     color: black;
     border-bottom: none; }
-    .btn-wrapper .btn:after, .btn-wrapper #filter-options li a:after, #filter-options li .btn-wrapper a:after, .btn-wrapper #filter-options label:after, #filter-options .btn-wrapper label:after {
+    .btn-wrapper .btn:after, .btn-wrapper .btn-big:after, .btn-wrapper #filter-options li a:after, #filter-options li .btn-wrapper a:after, .btn-wrapper #filter-options label:after, #filter-options .btn-wrapper label:after {
       content: ' \21A0'; }
   .btn-wrapper:hover {
     background-color: black;
     border: 2px solid transparent; }
-    .btn-wrapper:hover .btn, .btn-wrapper:hover #filter-options li a, #filter-options li .btn-wrapper:hover a, .btn-wrapper:hover #filter-options label, #filter-options .btn-wrapper:hover label {
+    .btn-wrapper:hover .btn, .btn-wrapper:hover .btn-big, .btn-wrapper:hover #filter-options li a, #filter-options li .btn-wrapper:hover a, .btn-wrapper:hover #filter-options label, #filter-options .btn-wrapper:hover label {
       color: white; }
   .dark-bg .btn-wrapper {
     background-color: white;
     background-color: transparent;
     border: 2px solid white; }
-    .dark-bg .btn-wrapper .btn, .dark-bg .btn-wrapper #filter-options li a, #filter-options li .dark-bg .btn-wrapper a, .dark-bg .btn-wrapper #filter-options label, #filter-options .dark-bg .btn-wrapper label {
+    .dark-bg .btn-wrapper .btn, .dark-bg .btn-wrapper .btn-big, .dark-bg .btn-wrapper #filter-options li a, #filter-options li .dark-bg .btn-wrapper a, .dark-bg .btn-wrapper #filter-options label, #filter-options .dark-bg .btn-wrapper label {
       color: white; }
     .dark-bg .btn-wrapper:hover {
       background-color: white; }
-      .dark-bg .btn-wrapper:hover .btn, .dark-bg .btn-wrapper:hover #filter-options li a, #filter-options li .dark-bg .btn-wrapper:hover a, .dark-bg .btn-wrapper:hover #filter-options label, #filter-options .dark-bg .btn-wrapper:hover label {
+      .dark-bg .btn-wrapper:hover .btn, .dark-bg .btn-wrapper:hover .btn-big, .dark-bg .btn-wrapper:hover #filter-options li a, #filter-options li .dark-bg .btn-wrapper:hover a, .dark-bg .btn-wrapper:hover #filter-options label, #filter-options .dark-bg .btn-wrapper:hover label {
         color: black; }
 
 @font-face {

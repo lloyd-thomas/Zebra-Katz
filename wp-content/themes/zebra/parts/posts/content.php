@@ -26,9 +26,8 @@ if ( ! empty( $categories ) ) {
 		    $link_target = $link['target'] ? $link['target'] : '_self';
 		    ?>
     <div class="text-center"><div class="p-b text-upper">
-			<div class="btn-wrapper">
-			<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-		</div>
+			<a class="btn-big" data-aos="zoom-in-down" data-aos-duration="500" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><span><?php echo esc_html( $link_title ); ?></span></a>
+
 		</div>
 	</div>
 <?php endif;
