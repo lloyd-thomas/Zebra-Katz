@@ -16,7 +16,7 @@ get_header(); ?>
           <div class="m-t m-b">
           <big class="p-t">Less is moor</big>
           <div class="m-b text-upper">
-            <a target="_blank" data-aos="zoom-in-down" data-aos-duration="500" href="https://officialmerchandise.store/collections/zebra-katz" class="btn-big"><span>Pre-order Album</span></a>
+            <a target="_blank" data-aos="zoom-in-down" data-aos-duration="500" href="https://zebrakatz.ffm.to/lessismoor" class="btn-big"><span>Get the album</span></a>
           </div>
         </div>
       </article>

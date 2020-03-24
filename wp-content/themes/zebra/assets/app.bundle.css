@@ -1447,6 +1447,7 @@ a {
     color: #FD6186; }
 
 section {
+  margin-top: -64px;
   position: relative;
   width: 100vw; }
   section.bg-white {
@@ -1464,7 +1465,7 @@ section {
       margin-top: 0; }
     @media only screen and (min-width: 750px) {
       section article {
-        padding: 6rem 0; } }
+        padding: 8rem 0; } }
 
 section.tour {
   margin-bottom: 10%; }
@@ -1541,7 +1542,9 @@ ul.tabs {
   ul.tabs li:hover {
     background: white; }
 
-.anim1, .anim2, .anim3 {
+.anim1,
+.anim2,
+.anim3 {
   opacity: 0; }
 
 .entry-content.aos-animate {
@@ -1894,6 +1897,9 @@ section.video {
 
 .blocks-gallery-item figcaption {
   display: none; }
+
+.wp-block-image {
+  text-align: center; }
 
 /* Slider */
 .gallery-wrapper .blocks-gallery-grid, .gallery-wrapper .wp-block-gallery {
